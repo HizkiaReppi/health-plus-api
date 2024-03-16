@@ -15,7 +15,7 @@ const register = async (payload) => {
   const data = await validate(createUserSchema, payload);
 
   const isEmailExists = await usersService.findByEmail(data.email);
-  if (isEmailExists) throw new ResponseError(400, 'Email already exists');
+  if (isEmailExists) throw new ResponseError('Email already exists', 400);
 
   data.password = await hash(data.password);
 
