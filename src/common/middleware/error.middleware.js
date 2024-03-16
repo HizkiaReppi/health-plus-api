@@ -23,12 +23,18 @@ const errorHandler = (err, req, res, next) => {
       .status(err.code)
       .json(response.error({ code: err.code, error: err.message }));
   } else if (err instanceof ValidationError) {
+    const details = [];
+
+    err.details.forEach((detail) => {
+      details.push(detail.message);
+    });
+
     logger.error(err.message);
     res.status(400).json(
       response.error({
         code: 400,
         error: 'Validation error',
-        data: err.details.map((detail) => detail.message).join(', '),
+        data: details,
       }),
     );
   } else {

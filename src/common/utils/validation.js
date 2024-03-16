@@ -1,3 +1,7 @@
+import Joi from 'joi';
+
+const { ValidationError } = Joi;
+
 const validate = async (schema, payload) => {
   const { error, value } = schema.validate(payload, {
     abortEarly: false,
@@ -5,8 +9,7 @@ const validate = async (schema, payload) => {
   });
 
   if (error) {
-    const errors = error.details.map((detail) => detail.message);
-    return errors;
+    throw new ValidationError('Validation failed', error.details);
   }
   return value;
 };
