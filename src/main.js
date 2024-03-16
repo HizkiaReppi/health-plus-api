@@ -7,6 +7,7 @@ import logger from './common/utils/logging.js';
 import router from './routes.js';
 import loggingMiddleware from './common/middleware/logging.middleware.js';
 import errorMiddleware from './common/middleware/error.middleware.js';
+import deserializeTokenMiddleware from './common/middleware/token.middleware.js';
 
 const app = express();
 const { port } = config.app;
@@ -18,6 +19,7 @@ app.use(cors());
 app.use(helmet());
 
 app.use(loggingMiddleware);
+app.use(deserializeTokenMiddleware);
 
 app.use('/api/v1', router);
 
