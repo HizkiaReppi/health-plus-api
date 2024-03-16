@@ -10,7 +10,7 @@
     "format": "prettier --write .src/**/*.js",
     "lint": "eslint .src/**/*.js",
     "postinstall": "prisma generate",
-    "migrate": "prisma migrate dev --name init",
+    "migrate": "prisma migrate dev",
     "studio": "prisma studio",
     "generate": "prisma generate"
   },
