@@ -56,7 +56,7 @@ const findAll = async (limit, page) => {
 const findByEmail = async (email) => {
   const data = await validate(getUserByEmailSchema, { email });
 
-  const user = await prisma.user.findUniqueOrThrow({
+  const user = await prisma.user.findUnique({
     where: { email: data.email },
   });
 
@@ -66,7 +66,7 @@ const findByEmail = async (email) => {
 const findById = async (id) => {
   const data = await validate(getUserByIdSchema, { id });
 
-  const user = await prisma.user.findUniqueOrThrow({
+  const user = await prisma.user.findUnique({
     where: { id: data.id },
   });
 

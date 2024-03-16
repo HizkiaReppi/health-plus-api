@@ -1,5 +1,5 @@
 import usersService from './users.service.js';
-import Response from '../common/utils/response.js';
+import Response from '../common/utils/Response.js';
 
 const response = new Response();
 
