@@ -32,11 +32,11 @@ const login = async (payload) => {
   const data = await validate(loginSchema, payload);
 
   const user = await usersService.findByEmail(data.email);
-  if (!user) throw new NotFoundError(404, 'Email or password is incorrect');
+  if (!user) throw new NotFoundError('Email or password is incorrect');
 
   const isPasswordMatch = await compare(data.password, user.password);
   if (!isPasswordMatch) {
-    throw new ResponseError(400, 'Email or password is incorrect');
+    throw new ResponseError('Email or password is incorrect', 400);
   }
 
   const { accessToken, refreshToken } = await generateToken(user);

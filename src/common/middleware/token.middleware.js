@@ -1,7 +1,7 @@
 import { verifyToken } from '../utils/jwt.js';
 
 const deserializeTokenMiddleware = async (req, res, next) => {
-  const authHeader = req.header.authorization;
+  const authHeader = req.headers.authorization;
   const accessToken = authHeader && authHeader?.split(' ')[1];
 
   if (!accessToken) {

@@ -1,11 +1,15 @@
 import usersService from './users.service.js';
 import Response from '../common/utils/Response.js';
+import logger from '../common/utils/logging.js';
 
 const response = new Response();
 
 const create = async (req, res, next) => {
   try {
     const data = await usersService.create(req.body);
+
+    logger.info(`Data has been created successfully: ${data.id}`);
+
     res
       .status(201)
       .location(`/users/${data.id}`)
@@ -29,6 +33,8 @@ const findAll = async (req, res, next) => {
     const data = await usersService.findAll(limit, page);
     const totalData = await usersService.count();
 
+    logger.info('Data has been retrieved successfully');
+
     res.status(200).json(
       response.getDataWithPagination({
         code: 200,
@@ -48,6 +54,9 @@ const findAll = async (req, res, next) => {
 const findById = async (req, res, next) => {
   try {
     const data = await usersService.findById(req.params.id);
+
+    logger.info(`Detail Data has been retrieved successfully: ${data.id}`);
+
     res.status(200).json(
       response.success({
         code: 200,
