@@ -1,12 +1,15 @@
-const validate = (schema, payload) => {
+import Joi from 'joi';
+
+const { ValidationError } = Joi;
+
+const validate = async (schema, payload) => {
   const { error, value } = schema.validate(payload, {
     abortEarly: false,
     allowUnknown: false,
   });
 
   if (error) {
-    const errors = error.details.map((detail) => detail.message);
-    return errors;
+    throw new ValidationError('Validation failed', error.details);
   }
   return value;
 };

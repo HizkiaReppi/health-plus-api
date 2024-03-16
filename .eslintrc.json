@@ -17,6 +17,7 @@
     "no-use-before-define": "error",
     "no-undef-init": "error",
     "camelcase": "error",
-    "eqeqeq": "error"
+    "eqeqeq": "error",
+    "new-cap": "off"
   }
 }
