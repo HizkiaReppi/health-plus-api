@@ -23,7 +23,7 @@ app.use('/api/v1', router);
 
 app.get('/api/v1', (req, res) => {
   logger.info('Welcome to HealthPlus API');
-  res.status(200).json({ message: 'Selamat datang di HealthPlus API' });
+  res.status(200).json({ message: 'Welcome to HealthPlus API' });
 });
 
 app.use((req, res) => {
