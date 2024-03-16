@@ -1,7 +1,9 @@
-import { ValidationError } from 'joi';
+import Joi from 'joi';
 import ResponseError from '../errors/ResponseError.js';
 import logger from '../utils/logging.js';
 import Response from '../utils/response.js';
+
+const { ValidationError } = Joi;
 
 /**
  * Error handler middleware.
