@@ -66,7 +66,7 @@ export default class Response {
     limit,
   }) {
     return {
-      status: false,
+      status: true,
       code,
       message,
       data,

@@ -1,4 +1,4 @@
-const validate = (schema, payload) => {
+const validate = async (schema, payload) => {
   const { error, value } = schema.validate(payload, {
     abortEarly: false,
     allowUnknown: false,
