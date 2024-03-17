@@ -4,7 +4,9 @@ dotenv.config();
 
 export default {
   app: {
-    port: process.env.PORT || 3000,
+    name: process.env.APP_NAME || 'healthplus',
+    url: process.env.APP_URL || 'http://localhost',
+    port: process.env.APP_PORT || 3000,
   },
   jwt: {
     publicKey: process.env.JWT_PUBLIC_KEY,
