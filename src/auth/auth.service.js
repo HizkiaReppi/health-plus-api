@@ -40,7 +40,7 @@ const login = async (payload) => {
   }
 
   const { accessToken, refreshToken } = await generateToken(user);
-  await updateRefreshToken(user.id, 'refreshToken');
+  await updateRefreshToken(user.id, refreshToken);
   await updateLastLogin(user.id);
 
   return { accessToken, refreshToken };
