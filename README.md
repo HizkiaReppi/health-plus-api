@@ -55,10 +55,55 @@ BASEURL/api-docs
 
 ## Team Members (7Teen)
 
-- Hizkia Jefren Reppi - Programmer
-- Grace Natalia Zalukhu - Programmer
-- Citra Dewi Puspita Sari - UI/UX Designer
-- Nasywa Zafirah Syahrani - UI/UX Designer
-- Bintang Mahaputra Ramadhan - Project Manager
+<table border="1" cellpadding="10" style="text-align:center;">
+    <tr>
+        <th>Hizkia Jefren Reppi</th>
+        <th>Grace Natalia Zalukhu</th>
+        <th>Citra Dewi Puspita Sari</th>
+        <th>Nasywa Zafirah Syahrani</th>
+        <th>Bintang Mahaputra Ramadhan</th>
+    </tr>
+    <tr>
+        <td>
+            <img src="https://avatars.githubusercontent.com/hizkiareppi" width="100" height="100" style="border-radius:50%" />
+        </td>
+        <td>
+            <img src="https://avatars.githubusercontent.com/Gracenzl" width="100" height="100" style="border-radius:50%" />
+        </td>
+        <td>
+            <img src="https://avatars.githubusercontent.com/citrasyya" width="100" height="100" style="border-radius:50%" />
+        </td>
+        <td>
+            <img src="https://avatars.githubusercontent.com/nasywazfh" width="100" height="100" style="border-radius:50%" />
+        </td>
+        <td>
+            <img src="https://avatars.githubusercontent.com/bintanggmr" width="100" height="100" style="border-radius:50%" />
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <a href="https://github.com/hizkiareppi">Hizkia Jefren Reppi</a>
+        </td>
+        <td>
+            <a href="https://github.com/Gracenzl">Grace Natalia Zalukhu</a>
+        </td>
+        <td>
+            <a href="https://github.com/citrasyya">Citra Dewi Puspita Sari</a>
+        </td>
+        <td>
+            <a href="https://github.com/nasywazfh">Nasywa Zafirah Syahrani</a>
+        </td>
+        <td>
+            <a href="https://github.com/bintanggmr">Bintang Mahaputra Ramadhan</a>
+        </td>
+    </tr>
+    <tr>
+        <td>Programmer</td>
+        <td>Programmer</td>
+        <td>UI/UX Designer</td>
+        <td>UI/UX Designer</td>
+        <td>Project Manager</td>
+    </tr>
+</table>
 
 _Health Plus - Powered by 7Teen_
