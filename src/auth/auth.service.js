@@ -1,6 +1,6 @@
 import { loginSchema } from './auth.validation.js';
 import { createUserSchema } from '../users/users.validation.js';
-import { hash, compare } from '../common/utils/hashing.js';
+import { compare } from '../common/utils/hashing.js';
 import {
   generateToken,
   updateLastLogin,
@@ -16,8 +16,6 @@ const register = async (payload) => {
 
   const isEmailExists = await usersService.findByEmail(data.email);
   if (isEmailExists) throw new ResponseError('Email already exists', 400);
-
-  data.password = await hash(data.password);
 
   const user = await usersService.create(data);
 
