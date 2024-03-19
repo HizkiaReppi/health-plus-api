@@ -21,10 +21,25 @@ model User {
   role          UserRole   @default(USER)
   lastLogin     DateTime?  @db.Timestamp
   refreshToken  String?    @db.VarChar(255)
+  assesments    Assesment[]
   createdAt     DateTime   @default(now())
   updatedAt     DateTime   @updatedAt
 
   @@map("users")
+}
+
+model Assesment {
+  id                      String    @id                @default(uuid())
+  userId                  String
+  scoreDiet               Float     @db.Float
+  scorePhysicalActivity   Float     @db.Float
+  scoreMentalHealth       Float     @db.Float
+  totalScore              Float?    @db.Float
+  user                    User      @relation(fields: [userId], references: [id])
+  createdAt               DateTime  @default(now())
+  updatedAt               DateTime  @updatedAt
+
+  @@map("assesments")
 }
 
 enum UserRole {

@@ -5,7 +5,7 @@ import {
   generateToken,
   updateLastLogin,
   updateRefreshToken,
-} from '../common/utils/auth.js';
+} from '../common/helpers/auth.js';
 import validate from '../common/utils/validation.js';
 import ResponseError from '../common/errors/ResponseError.js';
 import NotFoundError from '../common/errors/NotFoundError.js';

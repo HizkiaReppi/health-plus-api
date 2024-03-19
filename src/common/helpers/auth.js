@@ -1,7 +1,7 @@
 import config from '../config/config.js';
-import prisma from './database.js';
-import { generateToken as generateJwtToken } from './jwt.js';
-import { hash } from './hashing.js';
+import prisma from '../utils/database.js';
+import { generateToken as generateJwtToken } from '../utils/jwt.js';
+import { hash } from '../utils/hashing.js';
 
 /**
  * Update the refresh token of the user
