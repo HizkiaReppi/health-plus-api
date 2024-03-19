@@ -9,7 +9,7 @@ generator client {
 }
 
 datasource db {
-  provider = "postgresql"
+  provider = "mysql"
   url      = env("DATABASE_URL")
 }
 
@@ -40,6 +40,23 @@ model Assesment {
   updatedAt               DateTime  @updatedAt
 
   @@map("assesments")
+}
+
+model Question {
+  id            String          @id                @default(uuid())
+  question      String          @db.VarChar(255)
+  category      CategoryType
+  options       String          @db.VarChar(255)
+  createdAt     DateTime        @default(now())
+  updatedAt     DateTime        @updatedAt
+
+  @@map("questions")
+}
+
+enum CategoryType {
+  DIET
+  PHYSICAL_ACTIVITY
+  MENTAL_HEALTH
 }
 
 enum UserRole {

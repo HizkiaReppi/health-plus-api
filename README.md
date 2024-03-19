@@ -43,7 +43,7 @@
 - **Backend**
   - NodeJS
   - ExpressJS
-  - PostgreSQL
+  - MySQL
 
 ### Frontend Repository
 
